@@ -251,7 +251,7 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-button {
+.button {
   width: 216px;
   height: 50px;
   background-color: var(--link-color);
@@ -268,8 +268,8 @@ body {
   transition: background-color var(--animation);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.button:hover,
+.button:focus {
   background-color: var(--button-color);
 }
 
@@ -570,6 +570,56 @@ body {
   fill: currentColor;
 }
 
+.newsletters {
+  margin-left: auto;
+}
+
+.newsletters-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.newsletters-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.newsletters-input {
+  height: 50px;
+  width: 358px;
+  padding: 15px 16px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletters-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletters-btn {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletters-icon {
+  display: block;
+  margin-left: 10px;
+}
 /*  */
 /* portfolio.html styles  */
 /*  */
@@ -697,6 +747,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* bottom: 0;
   right: 0; */
 
@@ -720,14 +773,13 @@ body {
   transform: scale(0);
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.modal-wrap {
+}
 
+.modal {
+  position: relative;
+  padding: 40px;
   width: 528px;
-  height: 581px;
 
   background-color: var(--background-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -735,7 +787,7 @@ body {
   border-radius: 4px;
 }
 
-.modal-btn {
+.close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -755,11 +807,147 @@ body {
   transition: color var(--animation);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.close-btn:hover,
+.close-btn:focus {
   color: var(--icons-bg-color);
 }
 
-.icon-modal {
+.close-icon {
   fill: currentColor;
+}
+
+/* modal form */
+
+.modal-form {
+}
+
+.form-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input {
+  height: 40px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color var(--animation);
+  cursor: pointer;
+}
+.input:hover,
+.input:focus {
+  border-color: var(--link-color);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 50%;
+  transform: translateY(50%);
+  fill: var(--text-color);
+  transition: fill var(--animation);
+}
+.input:hover + .input-icon,
+.input:focus + .input-icon {
+  fill: var(--link-color);
+}
+
+.input::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-input {
+  padding-left: 35px;
+}
+
+.textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.check-label {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.check-input:checked + .icon-check {
+  fill: #2196f3;
+  border: none;
+}
+
+.icon-check {
+  fill: transparent;
+  border: 2px solid black;
+  border-radius: 2px;
+  transition: border-color var(--animation);
+}
+
+.icon-check:focus,
+.icon-check:hover {
+  border-color: var(--link-color);
+}
+
+.check-text {
+  font-size: 14px;
+  line-height: 1.72px;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+
+  user-select: none;
+}
+
+.check-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72px;
+  letter-spacing: 0.03em;
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
 }
