@@ -173,18 +173,18 @@ body {
   left: 0;
   bottom: -1px;
   display: block;
-  width: 0;
+  width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--link-color);
-
-  transition: width var(--animation);
+  transform: scaleX(0);
+  transition: transform var(--animation);
 }
 
 .nav-link-current::after,
 .nav-link:hover::after,
 .nav-link:focus::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 /* header contacts */
@@ -595,6 +595,7 @@ body {
   height: 50px;
   width: 358px;
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -859,7 +860,7 @@ body {
   transition: border-color var(--animation);
   cursor: pointer;
 }
-.input:hover,
+
 .input:focus {
   border-color: var(--link-color);
 }
@@ -872,7 +873,7 @@ body {
   fill: var(--text-color);
   transition: fill var(--animation);
 }
-.input:hover + .input-icon,
+
 .input:focus + .input-icon {
   fill: var(--link-color);
 }
@@ -911,8 +912,9 @@ body {
 }
 
 .check-input:focus + .icon-check {
-  outline: 2px solid var(--link-color);
-  outline-offset: 1px;
+  /* outline: 2px solid var(--link-color);
+  outline-offset: 1px; */
+  border-color: var(--link-color);
 }
 
 .check-input:checked + .icon-check {
